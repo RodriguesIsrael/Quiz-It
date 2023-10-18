@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/630e420763.js" crossorigin="anonymous"></script>
+    <title>Congrats!</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="end" class="flex-center flex-column">
+            <h1 id="finalScore"></h1>
+            <form>
+                <input type="text" name="username" id="username" placeholder="username">
+                <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)"
+                    disabled>Save</button>
+            </form>
+            <div class="feedbackbox">
+                <h4>feedback</h4>
+                <div class="emoji">
+                    <div id="emoji">
+                        <img src="assets/images/poor.png" alt="">
+                        <img src="assets/images/bad.png" alt="">
+                        <img src="assets/images/okay.png" alt="">
+                        <img src="assets/images/good.png" alt="">
+                        <img src="assets/images/excellent.png" alt="">
+                    </div>
+                </div>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <a class="btn" href="/game.html">Play Again</a>
+            <a class="btn" href="/"> Go Home</a>
+        </div>
+    </div>
+    <script src="assets/js/end.js"></script>
+</body>
+
+</html>
