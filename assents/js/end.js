@@ -1,115 +1,81 @@
-const question = document.getElementById("question");
-const choices = Array.from(document.getElementsByClassName("choice-text"));
-const progressText = document.getElementById('progressText');
-const scoreText = document.getElementById('score');
-const progressBarFull = document.getElementById('progressBarFull');
+const username = document.getElementById("username");
+const saveScoreBtn = document.getElementById("saveScoreBtn");
+const finalScore = document.getElementById("finalScore");
+const mostRecentScore = localStorage.getItem("mostRecentScore");
+var stars = document.getElementsByClassName("fa-solid");
+var emoji = document.getElementById("emoji");
 
-let currentQuestion = {};
-let acceptingAnswers = false;
-let score = 0;
-let questionCounter = 0;
-let availableQuetions = [];
-let starGame;
-let getNewQuestion;
-let incrementScore; 
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
-let questions = [
+const MAX_HIGH_SCORES = 5;
 
+finalScore.innerText = mostRecentScore;
+username.addEventListener("keyup", () => {
 
-    {
-        question: "Who is the most skillful player in football history?",
-        choice1: "<Pepe>",
-        choice2: "<Messi>",
-        choice3: "<Ronaldo>",
-        choice4: "<Mbape>",
-        answer: 1
-
-    },
-
-    {
-        question: "What is most valuable football clubs in the world in 2023?",
-        choice1: "<Barcelona>",
-        choice2: "<M United.>",
-        choice3: "<R.Madrid>",
-        choice4: "<Liverpool>",
-        answer: 3
-    },
-
-    {
-        question: "Who is the fastest human runner in history?",
-        choice1: "<Asafa Pawell>",
-        choice2: "<Yohan Blake>",
-        choice3: "<Tyson Gay>",
-        choice4: "<Usain Bolt>",
-        answer: 4
-    }
-];
-
-// CONSTANTS
-const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
-
-starGame = () => {
-    questionCounter = 0;
-    score = 0;
-    availableQuetions = [...questions];
-    getNewQuestion();
-
-};
-
-getNewQuestion = () => {
-    if (availableQuetions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore', score);
-        // go to the end page
-        return window.location.assign("/end.html");
-    }
-    questionCounter++;
-    progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
-    // Update the progress bar
-    progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
-
-    const questionIndex = Math.floor(Math.random() * availableQuetions.length);
-    currentQuestion = availableQuetions[questionIndex];
-    question.innerText = currentQuestion.question;
-
-    choices.forEach(choice => {
-        const number = choice.dataset["number"];
-        choice.innerText = currentQuestion["choice" + number];
-    });
-
-    availableQuetions.splice(questionIndex, 1);
-    acceptingAnswers = true;
-};
-
-choices.forEach(choice => {
-    choice.addEventListener('click', e => {
-        if (!acceptingAnswers) return;
-
-        acceptingAnswers = false;
-        const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset["number"];
-
-        const classToApply =
-            selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
-
-        if (classToApply === 'correct') {
-            incrementScore(CORRECT_BONUS);
-        }
-
-
-        selectedChoice.parentElement.classList.add(classToApply);
-
-        setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(classToApply);
-            getNewQuestion();
-
-        }, 1000);
-    });
+  saveScoreBtn.disabled = !username.value;
 });
 
-incrementScore = num => {
-    score += num;
-    scoreText.innerText = score;
+let saveHighScore = e => {
+  console.log("clicked the save button!");
+  e.preventDefault();
+
+  const score = {
+    score: Math.floor(Math.random() * 100),
+    name: username.value
+  };
+
+  highScores.push(score);
+  highScores.sort((a, b) => b.score - a.score);
+  highScores.splice(5);
+
+  localStorage.setItem('highScores', JSON.stringify(highScores));
+  window.location.assign("/");
+
+  console.log(highScores);
+
+};
+
+stars[0].onclick = function () {
+  stars[0].style.color = "#ffd93b";
+  stars[1].style.color = "#e4e4e4";
+  stars[2].style.color = "#e4e4e4";
+  stars[3].style.color = "#e4e4e4";
+  stars[4].style.color = "#e4e4e4";
+  emoji.style.transform = "translateX(0)";
 }
 
-starGame();
+stars[1].onclick = function () {
+  stars[0].style.color = "#ffd93b";
+  stars[1].style.color = "#ffd93b";
+  stars[2].style.color = "#e4e4e4";
+  stars[3].style.color = "#e4e4e4";
+  stars[4].style.color = "#e4e4e4";
+  emoji.style.transform = "translateX(-80px)";
+};
+
+stars[2].onclick = function () {
+  stars[0].style.color = "#ffd93b";
+  stars[1].style.color = "#ffd93b";
+  stars[2].style.color = "#ffd93b";
+  stars[3].style.color = "#e4e4e4";
+  stars[4].style.color = "#e4e4e4";
+  emoji.style.transform = "translateX(-160px)";
+};
+
+stars[3].onclick = function () {
+  stars[0].style.color = "#ffd93b";
+  stars[1].style.color = "#ffd93b";
+  stars[2].style.color = "#ffd93b";
+  stars[3].style.color = "#ffd93b";
+  stars[4].style.color = "#e4e4e4";
+  emoji.style.transform = "translateX(-240px)";
+};
+
+stars[4].onclick = function () {
+  stars[0].style.color = "#ffd93b";
+  stars[1].style.color = "#ffd93b";
+  stars[2].style.color = "#ffd93b";
+  stars[3].style.color = "#ffd93b";
+  stars[4].style.color = "#ffd93b";
+  emoji.style.transform = "translateX(-320px)";
+};
