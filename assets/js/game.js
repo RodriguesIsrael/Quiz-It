@@ -42,12 +42,40 @@ let questions = [
         choice3: "<Tyson Gay>",
         choice4: "<Usain Bolt>",
         answer: 4
+    },
+
+    {
+        question: "Who is the most skillful player in football history?",
+        choice1: "<Pele>",
+        choice2: "<Messi>",
+        choice3: "<Ronaldo>",
+        choice4: "<Mbape>",
+        answer: 1
+
+    },
+
+    {
+        question: "What is most valuable football clubs in the world in 2023?",
+        choice1: "<Barcelona>",
+        choice2: "<M United.>",
+        choice3: "<R.Madrid>",
+        choice4: "<Liverpool>",
+        answer: 3
+    },
+
+    {
+        question: "Who is the fastest human runner in history?",
+        choice1: "<Asafa Pawell>",
+        choice2: "<Yohan Blake>",
+        choice3: "<Tyson Gay>",
+        choice4: "<Usain Bolt>",
+        answer: 4
     }
 ];
 
 // CONSTANTS
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
+const MAX_QUESTIONS = 6;
 
 starGame = () => {
     questionCounter = 0;
