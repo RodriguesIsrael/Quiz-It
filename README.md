@@ -24,3 +24,10 @@ A quiz is a form of game or mind sport in which players attempt to answer questi
 
 
 ![2023-10-20 16_55_07-Quiz It](https://github.com/RodriguesIsrael/Quiz-It/assets/122437243/bdf081d4-a6b6-41e3-8e80-20f5a80bb5cc)
+
+## Testing
+I have tested manually this project by doing the following:
+ 
+  * Passed the code throught the official W3C validator with no issues.
+  * Passed the code through the official (Jigsaw) for CSS validator with no issues 
+  * Passed the link throught the oficial (Jshint) for Jscript validater with no issues:
