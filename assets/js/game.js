@@ -18,7 +18,7 @@ let questions = [
 
     {
         question: "Who is the most skillful player in football history?",
-        choice1: "<Pepe>",
+        choice1: "<Pele>",
         choice2: "<Messi>",
         choice3: "<Ronaldo>",
         choice4: "<Mbape>",
@@ -27,10 +27,10 @@ let questions = [
     },
 
     {
-        question: "What is most valuable football clubs in the world in 2023?",
+        question: "What is the most valuable football clubs in the world in 2023?",
         choice1: "<Barcelona>",
         choice2: "<M United.>",
-        choice3: "<R.Madrid>",
+        choice3: "<Real.M>",
         choice4: "<Liverpool>",
         answer: 3
     },
@@ -45,30 +45,30 @@ let questions = [
     },
 
     {
-        question: "Who is the most skillful player in football history?",
-        choice1: "<Pele>",
-        choice2: "<Messi>",
-        choice3: "<Ronaldo>",
-        choice4: "<Mbape>",
+        question: "What kind of sport did Peter Schumacher do?",
+        choice1: "<F1>",
+        choice2: "<Basktbol>",
+        choice3: "<athletics>",
+        choice4: "<footbol>",
         answer: 1
 
     },
 
     {
-        question: "What is most valuable football clubs in the world in 2023?",
-        choice1: "<Barcelona>",
-        choice2: "<M United.>",
-        choice3: "<R.Madrid>",
-        choice4: "<Liverpool>",
+        question: "In what year did the first Olympic Games take place?",
+        choice1: "<In 1985>",
+        choice2: "<In 1992>",
+        choice3: "<In 1896>",
+        choice4: "<In 1900>",
         answer: 3
     },
 
     {
-        question: "Who is the fastest human runner in history?",
-        choice1: "<Asafa Pawell>",
-        choice2: "<Yohan Blake>",
-        choice3: "<Tyson Gay>",
-        choice4: "<Usain Bolt>",
+        question: "Which country has the most World Cups?",
+        choice1: "<Germany>",
+        choice2: "<France>",
+        choice3: "<Itali>",
+        choice4: "<Brazil>",
         answer: 4
     }
 ];
