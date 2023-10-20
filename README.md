@@ -22,3 +22,4 @@ A quiz is a form of game or mind sport in which players attempt to answer questi
    
 ![2023-10-20 16_26_54-Congrats!](https://github.com/RodriguesIsrael/Quiz-It/assets/122437243/453eb257-7a60-41df-98de-be6c56601bb0)
 
+![2023-10-20 16_48_36-Quiz It](https://github.com/RodriguesIsrael/Quiz-It/assets/122437243/5173432f-87ac-4c91-ae2f-22de370205e4)
