@@ -31,3 +31,38 @@ I have tested manually this project by doing the following:
   * Passed the code throught the official W3C validator with no issues.
   * Passed the code through the official (Jigsaw) for CSS validator with no issues 
   * Passed the link throught the oficial (Jshint) for Jscript validater with no issues:
+
+##Bugs
+#### Solved Bugs
+  * While writing the code I got no bugs but when i tested i found some bugs  that where imediatly corrected
+  * I had a repeated style line that gave me errors in the testing process, after removing it, the error disappeared.
+
+### Remaining Bugs
+  * No bugs remain
+    
+## Technology
+ * Gidpod
+ * W3C validator
+ * e.g. Jshint validator
+ * Jigsaw CSS Validator
+
+## Deployment
+This project was deployed using GitPod
+   * Steps for deployment:
+     * Select the project on my Github Repository
+     * Click on Settings
+     * Click on Pages
+     * Select the Source and click on None and select main, and we click  on save
+     * Click on Code
+     * Click on  green ✔ 
+     * Click on Details of the fist line
+     * Click on deploy and then on Pull ghrc.io/action/jeckyll-bulld-pages:v1.0.7
+     * Click on Complete job on Evaluated environment url we can see the depoyment link.
+
+
+## Credits
+  * Gitpod for the deployment
+  * We3school 
+  * Google to search for answer when stuck 
+
+ 
